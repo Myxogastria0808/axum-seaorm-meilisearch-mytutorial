@@ -10,7 +10,7 @@ struct SampleData {
 
 #[tokio::main]
 async fn main() {
-    let client = Client::new(
+    let client: Client = Client::new(
         "http://127.0.0.1:7700",
         Some("1b85758befd0e2d3fd70f898966856af681c36848194addab18b21b6b180d34c"),
     )
@@ -18,7 +18,7 @@ async fn main() {
 
     //set document name
     // An index is where the documents are stored.
-    let sample_index = client.index("sample");
+    let sample_index: meilisearch_sdk::indexes::Index = client.index("sample");
 
     //add index data
     // Add some movies in the index. If the index 'movies' does not exist, Meilisearch creates it when you first add the documents.
