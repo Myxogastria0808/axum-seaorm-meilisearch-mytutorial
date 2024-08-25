@@ -35,7 +35,13 @@ services:
     tty: true
 ```
 
-4. Default Search API Key の取得
+4. docker-compose up -d
+
+```sh
+docker-compose up -d
+```
+
+5. Default Search API Key の取得
 
 参考サイト 2. より引用
 
@@ -44,7 +50,7 @@ sudo apt install jq
 curl   -X GET 'http://localhost:7700/keys'   -H 'Authorization: Bearer KSjeon19dn3Ls93nFNl349FNS93nkljasIk39fnsa' | jq
 ```
 
-5. client の生成
+6. client の生成
 
 ```rust
     let client: Client = Client::new(
