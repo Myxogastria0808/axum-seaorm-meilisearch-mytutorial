@@ -1,0 +1,9 @@
+[package]
+name = "axum-meilisearch-mytutorial"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+meilisearch-sdk = "0.27.1"
+serde = "1.0.209"
+tokio = { version = "1.39.3", features = ["full"] }
